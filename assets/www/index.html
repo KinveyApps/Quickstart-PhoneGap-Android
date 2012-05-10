@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Kinvey PhoneGap Tutorial</title>
+  <script src="cordova-1.7.0.js"></script>
+</head>
+<body>
+  <h1>Hello World</h1>
+  <script async src="https://da189i1jfloii.cloudfront.net/js/kinvey-js-0.9.1.min.js"></script>
+  <script>
+  document.addEventListener('deviceready', function() {
+    Kinvey.init({
+      appKey: 'kid1589',
+      appSecret: 'a3e3b717207e47c998e9dfb2c2cd373f'
+    });
+
+    // At this point, setup is complete and we can ping the Kinvey service.
+    Kinvey.ping({
+      success: function(response) {
+        alert('Kinvey Ping Success. Kinvey Service is alive, version: ' + response.version + ', response: ' + response.kinvey);
+      },
+      error: function(error) {
+        alert('Kinvey Ping Failed. Response: ' + error.message);
+      }
+    });
+  }, false);
+  </script>
+</body>
+</html>
