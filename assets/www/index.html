@@ -21,7 +21,7 @@
         alert('Kinvey Ping Success. Kinvey Service is alive, version: ' + response.version + ', response: ' + response.kinvey);
       },
       error: function(error) {
-        alert('Kinvey Ping Failed. Response: ' + error.message);
+        alert('Kinvey Ping Failed. Response: ' + error.description);
       }
     });
   }, false);
