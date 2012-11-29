@@ -1,0 +1,4 @@
+This project leverages the following third party projects:
+
+* [EcmaScript5 shim](https://github.com/kriskowal/es5-shim): MIT License.
+* [PhoneGap](http://phonegap.com): Apache License 2.0.

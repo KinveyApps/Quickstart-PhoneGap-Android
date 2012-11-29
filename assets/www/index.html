@@ -1,30 +1,36 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>Kinvey PhoneGap Tutorial</title>
-  <script src="cordova-2.0.0.js"></script>
-</head>
-<body>
-  <h1>Hello World</h1>
-  <script async src="https://da189i1jfloii.cloudfront.net/js/kinvey-phonegap-0.9.10.min.js"></script>
-  <script>
-  document.addEventListener('deviceready', function() {
-    Kinvey.init({
-      appKey: '<your-app-key>',
-      appSecret: '<your-app-secret>'
-    });
+  <head>
+    <meta charset="utf-8">
+    <title>TestDrive</title>
+    <meta name="description" content="">
 
-    // At this point, setup is complete and we can ping the Kinvey service.
-    Kinvey.ping({
-      success: function(response) {
-        alert('Kinvey Ping Success. Kinvey Service is alive, version: ' + response.version + ', response: ' + response.kinvey);
-      },
-      error: function(error) {
-        alert('Kinvey Ping Failed. Response: ' + error.description);
-      }
-    });
-  }, false);
-  </script>
-</body>
+    <!-- Add favicon.ico and stylesheets here -->
+
+    <!-- PhoneGap’s JavaScript library is included here -->
+    <script src="scripts/cordova-2.0.0.js"></script>
+  </head>
+  <body>
+    <!-- Add your site or application content here -->
+    <h1>TestDrive</h1>
+    <button id="ping">Ping Kinvey</button>
+
+    <!-- Kinvey’s PhoneGap library: change your appKey and appSecret with your own -->
+    <script>
+      Object.defineProperty || document.write('<script src="scripts/es5-shim.min.js"><\/script>');
+    </script>
+    <script src="https://da189i1jfloii.cloudfront.net/js/kinvey-phonegap-0.9.10.min.js"></script>
+    <script>
+      // When PhoneGap is ready, initialize Kinvey for use in your app.
+      document.addEventListener('deviceready', function() {
+        Kinvey.init({
+          appKey: '<your-app-key>',
+          appSecret: '<your-app-secret>'
+        });
+      }, false);
+    </script>
+    <script src="scripts/ping.js"></script>
+
+    <!-- Add JavaScript libraries and resources here -->
+  </body>
 </html>
