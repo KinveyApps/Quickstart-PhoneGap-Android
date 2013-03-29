@@ -3,25 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>TestDrive</title>
-    <meta name="description" content="">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 
     <!-- Add favicon.ico and stylesheets here -->
-
-    <!-- PhoneGap’s JavaScript library is included here -->
-    <script src="scripts/cordova-2.0.0.js"></script>
   </head>
   <body>
     <!-- Add your site or application content here -->
     <h1>TestDrive</h1>
     <button id="ping">Ping Kinvey</button>
 
-    <!-- Kinvey’s PhoneGap library: change your appKey and appSecret with your own -->
-    <script>
-      Object.defineProperty || document.write('<script src="scripts/es5-shim.min.js"><\/script>');
-    </script>
+    <!-- Add scripts here -->
+    <script src="lib/cordova-2.5.0.js"></script>
     <script src="https://da189i1jfloii.cloudfront.net/js/kinvey-phonegap-0.9.14.min.js"></script>
     <script>
       // When PhoneGap is ready, initialize Kinvey for use in your app.
+      // Replace your-app-key and your-app-secret with your own.
       document.addEventListener('deviceready', function() {
         Kinvey.init({
           appKey: '<your-app-key>',
@@ -30,7 +29,5 @@
       }, false);
     </script>
     <script src="scripts/ping.js"></script>
-
-    <!-- Add JavaScript libraries and resources here -->
   </body>
 </html>
